@@ -1,26 +1,38 @@
 #!/usr/bin/env python
-from random import randint
+import random
 
+#def example(): ex
+	#print "description"
+	#ex=str(raw_input("What do you want to do?\n"))
+	#if ex=="action":
+		#print "decription"
+		#callroom()
+	#elif ex=="otheraction":
+		#print "decription"
+		#callroom()
+	#else:
+		#print "error statement"
+		#callroom()
 
 #def woodShop(): wS
+	
+#def woodRoom(): wR
 
-#def woodRoom():
+#def paint(): p
 
-#def paint():
+#def supplies(): s
 
-#def supplies():
+#def project(): pro
 
-#def project():
-
-#def ???():
+#def ???(): ?
 	
 #def metalShop(): mS
 
-#def forge():
+#def forge(): f
 
-#def cage():
+#def cage(): cg
 
-#def cave():
+#def cave(): cv
 	
 def danceFloor(): 
 	print "The wall to the east of you is made of MIRRORs, and an ELECTRICFAN sits in the corner of the dance floor. To the SOUTH is another door, and there is more of the room to the WEST that you can't see."
@@ -28,32 +40,78 @@ def danceFloor():
 	if dF=="dance":
 		dance()
 	elif dF=="mirror":
-		print "You discover that you're tall and scrawny and male. You turn away quickly, it feels weird for you to be examining your reflection."
+		print "You discover that you're tall and scrawny and male. You realize you're wearing a soft, blue jacket, and khaki pants. You turn away quickly, it feels weird for you to be examining your reflection."
 		danceFloor()
+	elif dF=="electricfan":
+		print "You move over to the ELECTRICFAN."
+		electricFan()
+	elif dF=="west":
+		print "You move to the WEST section of the room, to the DANCEROOM proper."
+		danceRoom()
 	else:
 		print "You don't think you can do that."
 		danceFloor()
 		
 def dance():
 	print "Some lyrics come to mind."
-	d=randint(1, 3+1)
-	if d=="1":
+	d=random.randrange(1, 4)
+	if str(d)=="1":
 		print "\nWe can dance if we want to,\nwe can leave your friends behind.\n'Cuz your friends don't dance,\nand if they don't dance,\nwell they're no friends of mine.\n"
 		danceFloor()
-	elif d=="2":
+	elif str(d)=="2":
 		print "\nWhere you go I go.\nWhat you see, I see.\nI know I'd never be me\nwithout the security\nof your loving arms\nkeeping me from harm.\nPut your hand in my hand, and we'll stand.\n"
 		danceFloor()
-	elif d=="3":
+	elif str(d)=="3":
 		print "\nCome close, come close\nand call my name.\nHow can you turn your back on me\nwhen you know my pain?\n\nStay close, stay close,\nlight up the night.\nSave me from the part of me\nthat's begging to die.\n"
 		danceFloor()
-	elif d=="4":
+	elif str(d)=="4":
 		print "\nIt's the last night on earth,\nbefore the great divide.\nMy hands are shaking,\ntime was never on our side.\n\nAnd there's no such thing\nas a beautiful goodbye,\nas and ordinary day.\nI prayed for you a thousand times.\n"
 		danceFloor()
 	else:
 		print "Error: random number generated outside of limits."
 		danceFloor()
 		
-#def danceRoom(): dR
+def electricFan():
+	print "The ELECTRICFAN has a chipped blade, but other than that it is intact. Its cord is still plugged into the wall socket."
+	eF=str(raw_input("What do you want to do?\n"))
+	if eF=="turn on fan" or eF=="turn on electricfan":
+		print "You turn up the power knob on the ELECTRICFAN. Nothing happens. You reset the knob."
+		electricFan()
+	elif eF=="take electricfan" or eF=="take fan":
+		print "You unplug the ELECTRICFAN and pick it up. You note that you won't be able to do things with other objects while you are carrying the ELECTRICFAN." #need new description for dance floor when ELECTRICFAN is in possession, possibly create an "inventory" and check that when entering rooms?
+		danceFloor()
+	elif eF=="leave" or eF=="go back":
+		print "You step back from the ELECTRICFAN."
+		danceFloor()
+	else:
+		print "You don't think you can do that."
+		electricFan()
+		
+		
+def danceRoom():
+	print "You are back on linoleum flooring. To the west are more mirrors, and to the south is a short hall. In the WEST side of the hall, you can see a door. Opposite the door are rows and rows of pictures. There is also another door at the SOUTH end of the hall. To the EAST of you, is, of course, the DANCEFLOOR."
+	dR=str(raw_input("What do you want to do?\n"))
+	if dR=="west":
+		print "You walk through the door, into an OFFICE."
+		office()
+	elif dR=="south":
+		print "You approach the door at the end of the hallway."
+		exitProper()
+	elif "east":
+		print "You decide to return to the DANCEFLOOR."
+		danceFloor()
+	else:
+		print "You don't think you can do that."
+		danceRoom()
+		
+def office():
+	print "some description here" #later, also decide ifs and elifs.
+	danceRoom()
+	
+def exitProper():
+	print "description of door, and why you can't physically open it. You return to the DANCEROOM."
+	danceRoom()
+	
 	
 #def bertucciLand(): bL
 	
@@ -109,9 +167,9 @@ def startArea():
 	elif sA=="import flashlight":
 		print "If only you had a huge shoulderbag and green jacket. However, you do not. You find that you are unable to import a flashlight."
 		startArea()
-	elif sA=="warp dancefloor":
-		print "You open the door and enter into an alcove. Ahead is a wooden floor. You step onto it and realize that it is a DANCEFLOOR. You walk to the center of the wood floor."
-		danceFloor()
+	elif sA=="warp fan":
+		print "You move over to the ELECTRICFAN."
+		electricFan()
 	else:
 		print "Perhaps you should STAND before you do that."
 		startArea()
