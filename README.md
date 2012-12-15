@@ -1,4 +1,4 @@
 Zork
 ====
 
-Zork themed game for LASA
+sort-of-Zork-themed game for school
