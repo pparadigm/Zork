@@ -13,6 +13,38 @@ import random
 	#else:
 		#print "error statement"
 		#callroom()
+		
+		
+'''
+def myHandler(callingParams): action
+	print("view of room")
+	if callingParams is not None:
+		action = str(raw_input("prompt"))
+	else: action=callingParams
+	
+	if action=="some_val":
+		do stuff
+		return new_place
+'''
+'''
+then in your main program, you have a large case that does this:
+
+#select room
+
+place="start"
+
+while place is not None:
+	if place=="start": place=start(callingParams)
+	elif place=="some_other_place": place=another_place(callingParams)
+
+#all you have to do to end game is to return nothing, and you will get out of the Nav loop
+#then the code outside will run
+
+print("you won!")
+'''
+
+#also, local vars are local, uniqueness doesn't matter, and if you insist on using them in this way, you should use the same name
+#throughout the program, such as action
 
 #def woodShop(): wS
 	
