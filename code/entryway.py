@@ -20,10 +20,10 @@ def entryway():
 	elif a=="open door" or a=="try door" or a=="unlock door":
 		print "You don't want to do that. The outside gives you the chills, and not from the cold. You turn back to face the CORRIDOR."
 		entryway()
-	elif a=="examine door" or a=="look door":
+	elif a=="examine door" or a=="look door" or a=="door":
 		print "The DOORs look old but sturdy. They're made with metal, the paint is peeling off. They have small slits for windows filled with reinforced glass. You turn back to face the CORRIDOR."
 		entryway()
-	elif a=="look mat" or a=="examine mat":
+	elif a=="look mat" or a=="examine mat" or "mat":
 		print "A dirty, tattered MAT meant for the cleaning of shoes. There is nothing of interest here. You turn back to the CORRIDOR."
 		entryway()
 	else:
