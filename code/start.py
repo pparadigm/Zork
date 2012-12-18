@@ -28,7 +28,7 @@ elif a=="n":
 	print "Exiting..."
 	exit()
 elif a=="help":
-	print 'All responses are typed using lowercase letters. Things you can interact with are generally indicated with capital letters. For example, a sentence that says, "The FLASHLIGHT was turned off, and the WALL behind it was unlit," indicates that you may interact with the flashlight and the wall. The command "info" reprints what information you were given when entering the room, while "describe" uses great detail to describe the room.'
+	print 'All responses are typed using lowercase letters. Things you can interact with are generally indicated with capital letters. For example, a sentence that says, "The FLASHLIGHT is turned off, and the WALL behind it is unlit," indicates that you may interact with the flashlight and the wall. The command "info" reprints what information you were given when entering the room, while "describe" uses great detail to describe the room. ("Describe" and "info" commands not yet implemented.)'
 elif a=="entryway":
 	entryway.entryway()
 elif a=="danceroom":

@@ -6,11 +6,11 @@ def corridor():
 	if c=="go back" or c=="return entryway":
 		print "You turn around and head back to the ENTRYWAY."
 		entryway.entryway()
-	elif c=="examine glint" or c=="look glint":
+	elif c=="examine glint" or c=="look glint" or "glint":
 		glint()
 	else:
 		print "You don't think you can do that."
-		glint()
+		corridor()
 		
 def glint():
 	print "You examine the GLINT. Up close, you can barely see that it is a metal object attached to the wall. You run your fingers over it. It's cold, but you also feel something similar to a BUTTON. Alongside the BUTTON is a SLIT."

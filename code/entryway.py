@@ -24,7 +24,7 @@ def entryway():
 		print "The DOORs look old but sturdy. They're made with metal, the paint is peeling off. They have small slits for windows filled with reinforced glass. You turn back to face the CORRIDOR."
 		entryway()
 	elif a=="look mat" or a=="examine mat" or "mat":
-		print "A dirty, tattered MAT meant for the cleaning of shoes. There is nothing of interest here. You turn back to the CORRIDOR."
+		print "Beneath you is a dirty, tattered MAT meant for the cleaning of shoes. There is nothing of interest here. You turn back to the CORRIDOR."
 		entryway()
 	else:
 		print "You don't think you can do that."
