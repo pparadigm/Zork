@@ -1,4 +1,4 @@
 need to figure out how to use KEY with SLIT. if player does not have the KEY, they shouldn't be able to use the KEY, obviously. need to also figure out how to make the MAT accessible. maybe this is what maldridge meant about a state machine.
 need new description for dance floor when ELECTRICFAN is in possession, possibly create an "inventory" and check that when entering rooms?
-create inventory
-create global commands
+figure out how to do globalvariables in the form of an inventory and actions
+complete office() and exitProper() in danceRoom

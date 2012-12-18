@@ -1,3 +1,4 @@
+import globalvariables
 import entryway
 
 def corridor():

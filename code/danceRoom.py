@@ -1,3 +1,5 @@
+import globalvariables
+
 def danceFloor(): 
 	print "The wall to the east of you is made of MIRRORs, and an ELECTRICFAN sits in the corner of the dance floor. To the SOUTH is another door, and there is more of the room to the WEST that you can't see."
 	a=str(raw_input("What do you want to do?\n"))

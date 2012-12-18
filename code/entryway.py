@@ -1,9 +1,9 @@
 import corridor
 import startArea
+import globalvariables
 
 def entryway():
 	print "In front of you are two paths: the right one leads to a STAIRCASE, and the left one turns off into a CORRIDOR. Behind you is a set of DOORs surrounded by WINDOWs. You find yourself standing on a MAT."
-	#need descriptions for both ways of travel (or directions that aren't relative, but absolute), and a management system
 	a=str(raw_input("What do you want to do?\n"))
 	if a=="lay down":
 		print "You lay back down on the linoleum floor."

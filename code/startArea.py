@@ -1,4 +1,5 @@
 import entryway
+import globalvariables
 
 def startArea():
 	print "You find yourself lying a cold, linoleum floor. Everything is silent. It's dark, but there is some light filtering in above you.\n"
