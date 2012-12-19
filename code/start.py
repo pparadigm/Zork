@@ -36,7 +36,11 @@ def start():
 		exit()
 	elif a=="help":
 		print "-----"
-		print 'All responses are typed using lowercase letters. Things you can interact with are generally indicated with capital letters. For example, a sentence that says, "The FLASHLIGHT is turned off, and the WALL behind it is unlit," indicates that you may interact with the flashlight and the wall. The command "info" reprints what information you were given when entering the room, while "describe" uses great detail to describe the room. ("Describe" and "info" commands not yet implemented.)'
+		print '''All responses are typed using lowercase letters. Things you can interact with are generally indicated with capital letters. For example, a sentence that says, "The FLASHLIGHT is turned off, and the WALL behind it is unlit," indicates that you may interact with the flashlight and the wall. 
+		
+		Commands are very simple. Oftentimes just entering the capitalized word will produce results, but you can usually "look <object>" or "leave|go back." If you would like to enter a room, you can usually just type the name of that room if it is accessable from your current position.
+		
+		The command "info" reprints what information you were given when entering the room, while "describe" uses great detail to describe the room. ("Describe" and "info" commands not yet implemented.)'''
 		start()
 	elif a=="entryway":
 		entryway.entryway()
