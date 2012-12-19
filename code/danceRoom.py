@@ -53,7 +53,8 @@ def electricFan():
 		electricFan()
 	elif a=="take electricfan" or a=="take fan":
 		print "-----"
-		print "You unplug the ELECTRICFAN and pick it up. You note that you won't be able to do things with other objects while you are carrying the ELECTRICFAN." #need new description for dance floor when ELECTRICFAN is in possession, possibly create an "inventory" and check that when entering rooms?
+		print "You unplug the ELECTRICFAN and pick it up. You note that you won't be able to do things with other objects while you are carrying the ELECTRICFAN."
+		globalvariables.electricfan=1
 		danceFloor()
 	elif a=="leave" or a=="go back":
 		print "-----"

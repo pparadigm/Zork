@@ -31,10 +31,52 @@ def entryway():
 		print "The DOORs look old but sturdy. They're made with metal, the paint is peeling off. They have small slits for windows filled with reinforced glass. You turn back to face the CORRIDOR."
 		entryway()
 	elif a=="look mat" or a=="examine mat" or a=="mat":
-		print "-----"
-		print "Beneath you is a dirty, tattered MAT meant for the cleaning of shoes. There is nothing of interest here. You turn back to the CORRIDOR."
-		entryway()
+		if globalvariables.keyaccess==0:
+			print "-----"
+			print "Beneath you is a dirty, tattered MAT meant for the cleaning of shoes. There is nothing of interest here. You turn back to the CORRIDOR."
+			entryway()
+		elif globalvariables.keyaccess==1:
+			mat()
+		else:
+			print "-----"
+			print "Error: keyaccess storage."
+			entryway()
 	else:
 		print "-----"
 		print "You don't think you can do that."
+		entryway()
+
+def mat():
+	if globalvariables.keyaccess==1:
+		print "-----"
+		print "Beneath you is a dirty, tattered mat meant for the cleaning of shoes. Perhaps you should SEARCH the mat.\n"
+		a=str(raw_input("What would you like to do?\n"))
+		if a=="search":
+			print "-----"
+			print "You lift the corner that is most convenient. Underneath the mat is a KEY.\n"
+			a=str(raw_input("Would you like to take the KEY?\n"))
+			if a=="yes" or a=="y":
+				print "-----"
+				print "You take the KEY."
+				globalvariables.lightkey=1
+				globalvariables.keyaccess=0
+				entryway()
+			elif a=="no" or a=="n":
+				print "-----"
+				print "You replace the mat."
+				mat()
+			else:
+				print "-----"
+				print "That is not a proper answer."
+				mat()
+		elif a=="leave" or a=="go back" or a=="nothing":
+			print "-----"
+			print "You turn back to the CORRIDOR."
+			entryway()
+		else:
+			"-----"
+			print "You don't think you can do that."
+			mat()
+	else:
+		print "Error: You don't have access to this."
 		entryway()
