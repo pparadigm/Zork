@@ -7,8 +7,8 @@ import sys
 import random
 
 welcome='''
-welcome to demo 1.0\n
-syntax is simple and short\n'''
+welcome to demo 1.0
+syntax is simple and short'''
 
 '''
 puzzle is south of start
