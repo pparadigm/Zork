@@ -1,2 +1,0 @@
-need new description for dance floor when ELECTRICFAN is in possession
-complete office() and exitProper() in danceRoom

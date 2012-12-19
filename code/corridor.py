@@ -4,7 +4,7 @@ import hallway1
 import woodShop
 
 def corridor():
-	if globalvariables.lightson==0:
+	if globalvariables.lightsOn==0:
 		print "-----"
 		print "There's nothing much here. You feel the corridor extend to the WEST, but it is too dark for you too feel safe continuing on. However, you do notice a GLINT on the wall to the east. SOUTH of you is the entryway.\n"
 		a = str(raw_input("What do you want to do?\n"))
@@ -22,7 +22,7 @@ def corridor():
 			print "-----"
 			print "You don't think you can do that."
 			corridor()
-	elif globalvariables.lightson==1:
+	elif globalvariables.lightsOn==1:
 		print "-----"
 		print "There is a long HALLWAY to the west with many doors on either side. Nearby and also to the west is a PURPLEDOOR that you could not see in the darkness.\n"
 		a = str(raw_input("What do you want to do?\n"))
@@ -72,7 +72,7 @@ def purpledoor():
 		purpledoor()
 		
 def glint():
-	if globalvariables.buttonpressable==0:
+	if globalvariables.buttonPressable==0:
 		print "-----"
 		print "You examine the glint. Up close, you can barely see that it is a metal object attached to the wall. You run your fingers over it. It's cold, but you also feel something similar to a BUTTON. Alongside the BUTTON is a SLIT.\n"
 		a=str(raw_input("What do you want to do?\n"))
@@ -94,7 +94,7 @@ def glint():
 			print "-----"
 			print "You don't think you can do that."
 			glint()
-	elif globalvariables.buttonpressable==1:
+	elif globalvariables.buttonPressable==1:
 		print "-----"
 		print "You examine the glint. Close up, you can see that there is a BUTTON. Alongside the BUTTON is a slit filled with a key.\n"
 		a=str(raw_input("What do you want to do?\n"))
@@ -103,10 +103,10 @@ def glint():
 			print "You step away from the GLINT."
 			corridor()
 		elif a=="push button" or a=="press button" or a=="button":
-			globalvariables.buttonpressable=0
+			globalvariables.buttonPressable=0
 			print "-----"
 			print "The lights turn on. You can now see the long hallway to the WEST of you, with doors every few feet on both sides. You now feel safe to CONTINUE down the hallway."
-			globalvariables.lightson=1
+			globalvariables.lightsOn=1
 			corridor()
 		elif a=="examine slit" or a=="look slit" or a=="slit":
 			slit()
@@ -115,24 +115,24 @@ def glint():
 			print "You don't think you can do that."
 			glint()
 def slit():
-	if globalvariables.keyaccess==0 and globalvariables.lightkey==0:
+	if globalvariables.keyAccess==0 and globalvariables.lightKey==0:
 		print "-----"
 		print "You try to garner more information about the slit. All you can tell is that it is a small rectangle. A key of some sort might fit."
-		globalvariables.keyaccess=1
+		globalvariables.keyAccess=1
 		glint()
-	elif globalvariables.keyaccess==1:
+	elif globalvariables.keyAccess==1:
 		print "-----"
 		print "A key might fit in this slit. I should look for one."
 		glint()
-	elif globalvariables.keyaccess==0 and globalvariables.lightkey==1:
+	elif globalvariables.keyAccess==0 and globalvariables.lightKey==1:
 		print "-----"
 		print "A key might fit here." 
 		a=str(raw_input("Would you like to try your key?\n"))
 		if a=="yes" or a=="y":
 			print "-----"
 			print "You insert your key."
-			globalvariables.buttonpressable=1
-			globalvariables.lightkey=0
+			globalvariables.buttonPressable=1
+			globalvariables.lightKey=0
 			glint()
 		elif a=="no" or a=="n":
 			print "-----"

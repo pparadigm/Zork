@@ -31,15 +31,15 @@ def entryway():
 		print "The DOORs look old but sturdy. They're made with metal, the paint is peeling off. They have small slits for windows filled with reinforced glass. You turn back to face the CORRIDOR."
 		entryway()
 	elif a=="look mat" or a=="examine mat" or a=="mat":
-		if globalvariables.keyaccess==0:
+		if globalvariables.keyAccess==0:
 			print "-----"
 			print "Beneath you is a dirty, tattered MAT meant for the cleaning of shoes. There is nothing of interest here. You turn back to the CORRIDOR."
 			entryway()
-		elif globalvariables.keyaccess==1:
+		elif globalvariables.keyAccess==1:
 			mat()
 		else:
 			print "-----"
-			print "Error: keyaccess storage."
+			print "Error: keyAccess storage."
 			entryway()
 	else:
 		print "-----"
@@ -47,7 +47,7 @@ def entryway():
 		entryway()
 
 def mat():
-	if globalvariables.keyaccess==1:
+	if globalvariables.keyAccess==1:
 		print "-----"
 		print "Beneath you is a dirty, tattered mat meant for the cleaning of shoes. Perhaps you should SEARCH the mat.\n"
 		a=str(raw_input("What would you like to do?\n"))
@@ -58,8 +58,8 @@ def mat():
 			if a=="yes" or a=="y":
 				print "-----"
 				print "You take the KEY."
-				globalvariables.lightkey=1
-				globalvariables.keyaccess=0
+				globalvariables.lightKey=1
+				globalvariables.keyAccess=0
 				entryway()
 			elif a=="no" or a=="n":
 				print "-----"
