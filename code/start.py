@@ -5,6 +5,8 @@ import entryway
 import corridor
 import danceRoom
 import globalvariables
+import woodShop
+import hallway1
 
 
 print '''
@@ -42,6 +44,10 @@ def start():
 		danceRoom.danceRoom()
 	elif a=="corridor":
 		corridor.corridor()
+	elif a=="woodshop":
+		woodShop.woodShop()
+	elif a=="hallway1":
+		hallway1.hallway1()
 	else:
 		print "Error. Invalid command."
 		start()

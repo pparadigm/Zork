@@ -10,7 +10,7 @@ def corridor():
 		a = str(raw_input("What do you want to do?\n"))
 		if a=="go back" or a=="return entryway" or a=="south":
 			print "-----"
-			print "You turn around and head to the ENTRYWAY."
+			print "You head to the ENTRYWAY."
 			entryway.entryway()
 		elif a=="examine glint" or a=="look glint" or a=="glint":
 			glint()
