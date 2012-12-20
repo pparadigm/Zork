@@ -17,15 +17,24 @@ def entryway():
 	elif a=="look window" or a=="examine window" or a=="window":
 		print "-----"
 		print "You go up to the WINDOW and look out through it. It's dark outside of the building. Everything is still and empty, trees sit without leaves. Before you lies a street; there are rusty signs along the edge of it, and sagging buildings in the distance. You get the chills. You turn back to face the CORRIDOR."
+		globalvariables.doorForeboding=1
 		entryway() 
 	elif a=="corridor":
 		print "-----"
 		print "You step forward, into the CORRIDOR."
 		corridor.corridor()
 	elif a=="open door" or a=="try door" or a=="unlock door":
-		print "-----"
-		print "You don't want to do that. The outside gives you the chills, and not from the cold. You turn back to face the CORRIDOR."
-		entryway()
+		if globalvariables.doorForeboding==1:
+			print "-----"
+			print "You don't want to do that. The outside gives you the chills, and not from the cold. You turn back to face the CORRIDOR."
+			entryway()
+		elif globalvariables.doorForeboding==0:
+			print "-----"
+			print "Perhaps you should check the WINDOW to see where you are headed before you try this door."
+			entryway()
+		else:
+			print "Error: Check door variable."
+			entryway()
 	elif a=="examine door" or a=="look door" or a=="door":
 		print "-----"
 		print "The DOORs look old but sturdy. They're made with metal, the paint is peeling off. They have small slits for windows filled with reinforced glass. You turn back to face the CORRIDOR."
