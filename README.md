@@ -1,9 +1,8 @@
-Zork
+Dark
 ====
 
-sort-of-Zork-themed game for school
+Mysterious text-based adventure game with a heavy emphasis on 
+story-telling and imagery. Done as a learning experience, but 
+should eventually be a full-fledged game. 
 
-
-very fun, but done mostly as a learning experience; don't expect it to work
-on all systems.  At some point we'll post a listing of what it compiles against.
-
+Dark should work wherever Python 2.7 can be run.
